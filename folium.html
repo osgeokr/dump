@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ac9afb0a7a6b43e498a772088bccaa32 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+            <style>
+                #scroll_zoom_toggler_4530a4d296fb49a9951869dc4f271160 {
+                    position:absolute;
+                    width:35px;
+                    bottom:10px;
+                    height:35px;
+                    left:10px;
+                    background-color:#fff;
+                    text-align:center;
+                    line-height:35px;
+                    vertical-align: middle;
+                    }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_ac9afb0a7a6b43e498a772088bccaa32" ></div>
+        
+    
+            <img id="scroll_zoom_toggler_4530a4d296fb49a9951869dc4f271160"
+                 alt="scroll"
+                 src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/arrow-move.png"
+                 style="z-index: 999999"
+                 onclick="map_ac9afb0a7a6b43e498a772088bccaa32.toggleScroll()">
+            </img>
+        
+</body>
+<script>    
+    
+            var map_ac9afb0a7a6b43e498a772088bccaa32 = L.map(
+                "map_ac9afb0a7a6b43e498a772088bccaa32",
+                {
+                    center: [45.0, 3.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8d5b30dc877b4a019c9e3e860d001aa8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ac9afb0a7a6b43e498a772088bccaa32);
+        
+    
+            map_ac9afb0a7a6b43e498a772088bccaa32.scrollEnabled = true;
+
+            map_ac9afb0a7a6b43e498a772088bccaa32.toggleScroll = function() {
+                if (this.scrollEnabled) {
+                    this.scrollEnabled = false;
+                    this.scrollWheelZoom.disable();
+                } else {
+                    this.scrollEnabled = true;
+                    this.scrollWheelZoom.enable();
+                }
+            };
+            map_ac9afb0a7a6b43e498a772088bccaa32.toggleScroll();
+        
+</script>
