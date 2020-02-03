@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_40821194dbc84f1b868164c3bbd3597c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+            <style>
+                #scroll_zoom_toggler_544b6b26d04742f98cb1aa2df64b737a {
+                    position:absolute;
+                    width:35px;
+                    bottom:10px;
+                    height:35px;
+                    left:10px;
+                    background-color:#fff;
+                    text-align:center;
+                    line-height:35px;
+                    vertical-align: middle;
+                    }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_40821194dbc84f1b868164c3bbd3597c" ></div>
+        
+    
+            <img id="scroll_zoom_toggler_544b6b26d04742f98cb1aa2df64b737a"
+                 alt="scroll"
+                 src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/arrow-move.png"
+                 style="z-index: 999999"
+                 onclick="map_40821194dbc84f1b868164c3bbd3597c.toggleScroll()">
+            </img>
+        
+</body>
+<script>    
+    
+            var map_40821194dbc84f1b868164c3bbd3597c = L.map(
+                "map_40821194dbc84f1b868164c3bbd3597c",
+                {
+                    center: [37.56641, 126.901646],
+                    crs: L.CRS.EPSG3857,
+                    preferCanvas: false,
+                    zoomControl: true,
+                    zoom: 13,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a7f923d1be844f809278223b3a171f19 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            map_40821194dbc84f1b868164c3bbd3597c.scrollEnabled = true;
+
+            map_40821194dbc84f1b868164c3bbd3597c.toggleScroll = function() {
+                if (this.scrollEnabled) {
+                    this.scrollEnabled = false;
+                    this.scrollWheelZoom.disable();
+                } else {
+                    this.scrollEnabled = true;
+                    this.scrollWheelZoom.enable();
+                }
+            };
+            map_40821194dbc84f1b868164c3bbd3597c.toggleScroll();
+        
+    
+            var marker_ac58d1a367824a6abe369369e42268f8 = L.marker(
+                [37.5685066365766, 126.96792107169],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ed7e3c74aeb34b09b6a4e770132e8206 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac58d1a367824a6abe369369e42268f8.setIcon(icon_ed7e3c74aeb34b09b6a4e770132e8206);
+        
+    
+        var popup_243ef53696b849fb9ab9a8e9b4308ec8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a1166c0fc1a41a8be17b03952f311e0 = $(`<div id="html_6a1166c0fc1a41a8be17b03952f311e0" style="width: 100.0%; height: 100.0%;">신종코로나 강북삼성병원 선별진료소</div>`)[0];
+            popup_243ef53696b849fb9ab9a8e9b4308ec8.setContent(html_6a1166c0fc1a41a8be17b03952f311e0);
+        
+
+        marker_ac58d1a367824a6abe369369e42268f8.bindPopup(popup_243ef53696b849fb9ab9a8e9b4308ec8)
+        ;
+
+        
+    
+    
+            var marker_340c2d810a3b4c94a7dad75c6518de3c = L.marker(
+                [37.6024569702276, 126.928823550033],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_f53ce2ee76fb4b9c89663ecba34aceb9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_340c2d810a3b4c94a7dad75c6518de3c.setIcon(icon_f53ce2ee76fb4b9c89663ecba34aceb9);
+        
+    
+        var popup_2358fa39037a47d59ba4558bf0b0bffd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8507e0e04e484197992010b68b4abe5b = $(`<div id="html_8507e0e04e484197992010b68b4abe5b" style="width: 100.0%; height: 100.0%;">신종코로나 은평구보건소 선별진료소</div>`)[0];
+            popup_2358fa39037a47d59ba4558bf0b0bffd.setContent(html_8507e0e04e484197992010b68b4abe5b);
+        
+
+        marker_340c2d810a3b4c94a7dad75c6518de3c.bindPopup(popup_2358fa39037a47d59ba4558bf0b0bffd)
+        ;
+
+        
+    
+    
+            var marker_627ee7e8fd3d477ebfc1a8094ce9d230 = L.marker(
+                [37.7411207604014, 127.042486795527],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_702ab0a44b984221b61bf36a01534d58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_627ee7e8fd3d477ebfc1a8094ce9d230.setIcon(icon_702ab0a44b984221b61bf36a01534d58);
+        
+    
+        var popup_96b0d13e081146e8ab8f1bc911d01e24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67440565226147b196d451600a3346bc = $(`<div id="html_67440565226147b196d451600a3346bc" style="width: 100.0%; height: 100.0%;">신종코로나 경기도의료원의정부병원 선별진료소</div>`)[0];
+            popup_96b0d13e081146e8ab8f1bc911d01e24.setContent(html_67440565226147b196d451600a3346bc);
+        
+
+        marker_627ee7e8fd3d477ebfc1a8094ce9d230.bindPopup(popup_96b0d13e081146e8ab8f1bc911d01e24)
+        ;
+
+        
+    
+    
+            var marker_84f2c829765b490ebbb4790e7539e04b = L.marker(
+                [37.1292496709955, 126.904556332716],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_3168c3c997e04af8bc7cf7a322ab256c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_84f2c829765b490ebbb4790e7539e04b.setIcon(icon_3168c3c997e04af8bc7cf7a322ab256c);
+        
+    
+        var popup_19d59c431e3c40358e095df217be2621 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed33dbaa88e14bdb9893593708d98924 = $(`<div id="html_ed33dbaa88e14bdb9893593708d98924" style="width: 100.0%; height: 100.0%;">신종코로나 화성시보건소 선별진료소</div>`)[0];
+            popup_19d59c431e3c40358e095df217be2621.setContent(html_ed33dbaa88e14bdb9893593708d98924);
+        
+
+        marker_84f2c829765b490ebbb4790e7539e04b.bindPopup(popup_19d59c431e3c40358e095df217be2621)
+        ;
+
+        
+    
+    
+            var marker_6c83f12e308f446cafd1e5905f29f3de = L.marker(
+                [37.5145795416534, 127.106555651993],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_acad86d877ad48e4966bc757b1dd80a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6c83f12e308f446cafd1e5905f29f3de.setIcon(icon_acad86d877ad48e4966bc757b1dd80a8);
+        
+    
+        var popup_a85ebf1b15e84ae18b9f5929fcc58003 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b77a76b6525b4af5850afa2538870b26 = $(`<div id="html_b77a76b6525b4af5850afa2538870b26" style="width: 100.0%; height: 100.0%;">신종코로나 송파구보건소 선별진료소</div>`)[0];
+            popup_a85ebf1b15e84ae18b9f5929fcc58003.setContent(html_b77a76b6525b4af5850afa2538870b26);
+        
+
+        marker_6c83f12e308f446cafd1e5905f29f3de.bindPopup(popup_a85ebf1b15e84ae18b9f5929fcc58003)
+        ;
+
+        
+    
+    
+            var marker_274ef4a30d744dca8cbfd141aa454754 = L.marker(
+                [37.6027096736287, 127.039531534938],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ec19934db30f4918a2508b4ae5dd3a28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_274ef4a30d744dca8cbfd141aa454754.setIcon(icon_ec19934db30f4918a2508b4ae5dd3a28);
+        
+    
+        var popup_a841af40c1d24e01a8bed10e999bf667 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_235f321955694ff8a7b9ef4e85c551ac = $(`<div id="html_235f321955694ff8a7b9ef4e85c551ac" style="width: 100.0%; height: 100.0%;">신종코로나 성북구보건소 선별진료소</div>`)[0];
+            popup_a841af40c1d24e01a8bed10e999bf667.setContent(html_235f321955694ff8a7b9ef4e85c551ac);
+        
+
+        marker_274ef4a30d744dca8cbfd141aa454754.bindPopup(popup_a841af40c1d24e01a8bed10e999bf667)
+        ;
+
+        
+    
+    
+            var marker_53c59d4b6b4b400293dd3e863b9d45e9 = L.marker(
+                [37.5496175052695, 126.868285554347],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_1f9a8e95e7584a0fb5047328d8a967c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_53c59d4b6b4b400293dd3e863b9d45e9.setIcon(icon_1f9a8e95e7584a0fb5047328d8a967c8);
+        
+    
+        var popup_d55d4385d5f84d2898966b63d59712f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8fcf1632cdd4cd29dd1e736f6797d31 = $(`<div id="html_d8fcf1632cdd4cd29dd1e736f6797d31" style="width: 100.0%; height: 100.0%;">신종코로나 강서구보건소 선별진료소</div>`)[0];
+            popup_d55d4385d5f84d2898966b63d59712f3.setContent(html_d8fcf1632cdd4cd29dd1e736f6797d31);
+        
+
+        marker_53c59d4b6b4b400293dd3e863b9d45e9.bindPopup(popup_d55d4385d5f84d2898966b63d59712f3)
+        ;
+
+        
+    
+    
+            var marker_2c36eca3b8d94926b741b950dab08bb4 = L.marker(
+                [37.4784799393239, 126.951168342897],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c8db079b8ca84c07ba0f6b34afd6128d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2c36eca3b8d94926b741b950dab08bb4.setIcon(icon_c8db079b8ca84c07ba0f6b34afd6128d);
+        
+    
+        var popup_f368c7a1de6a48fe80299737b4f93cf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_956789944f004d0c8ba7cdd913ceac4d = $(`<div id="html_956789944f004d0c8ba7cdd913ceac4d" style="width: 100.0%; height: 100.0%;">신종코로나 관악구보건소 선별진료소</div>`)[0];
+            popup_f368c7a1de6a48fe80299737b4f93cf3.setContent(html_956789944f004d0c8ba7cdd913ceac4d);
+        
+
+        marker_2c36eca3b8d94926b741b950dab08bb4.bindPopup(popup_f368c7a1de6a48fe80299737b4f93cf3)
+        ;
+
+        
+    
+    
+            var marker_eaa3ffc02e8f40e6a902991ff5acadb0 = L.marker(
+                [37.4927889503163, 127.046348715929],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_cb284a4407ef4a75bdc76210b5e2be2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eaa3ffc02e8f40e6a902991ff5acadb0.setIcon(icon_cb284a4407ef4a75bdc76210b5e2be2f);
+        
+    
+        var popup_d92a6b25d36c430b81cc1e791bb58ca8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2d43af1245f4848b7d39ecdcfd89400 = $(`<div id="html_f2d43af1245f4848b7d39ecdcfd89400" style="width: 100.0%; height: 100.0%;">신종코로나 강남세브란스병원 선별진료소</div>`)[0];
+            popup_d92a6b25d36c430b81cc1e791bb58ca8.setContent(html_f2d43af1245f4848b7d39ecdcfd89400);
+        
+
+        marker_eaa3ffc02e8f40e6a902991ff5acadb0.bindPopup(popup_d92a6b25d36c430b81cc1e791bb58ca8)
+        ;
+
+        
+    
+    
+            var marker_03a620ebcd5b407dbe42ef53929eeca9 = L.marker(
+                [35.1462777060438, 129.059954898534],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_140f9174cafd4e9a90c45e54738a3d8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_03a620ebcd5b407dbe42ef53929eeca9.setIcon(icon_140f9174cafd4e9a90c45e54738a3d8b);
+        
+    
+        var popup_7b52163375164923aa7d2b62125bd48f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_862c686b7911419d8a84ab5adc94663e = $(`<div id="html_862c686b7911419d8a84ab5adc94663e" style="width: 100.0%; height: 100.0%;">신종코로나 부산진구보건소 선별진료소</div>`)[0];
+            popup_7b52163375164923aa7d2b62125bd48f.setContent(html_862c686b7911419d8a84ab5adc94663e);
+        
+
+        marker_03a620ebcd5b407dbe42ef53929eeca9.bindPopup(popup_7b52163375164923aa7d2b62125bd48f)
+        ;
+
+        
+    
+    
+            var marker_4afcff2b8fe14bc9a3fa385e60dd0d80 = L.marker(
+                [37.5263484763681, 126.895504665117],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_e02b7c7998d34243931c6b55c6e5a5c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4afcff2b8fe14bc9a3fa385e60dd0d80.setIcon(icon_e02b7c7998d34243931c6b55c6e5a5c5);
+        
+    
+        var popup_b0b8eeb843d348929457aeec883961da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f91712dbde9e43378c1c7a6e0377c468 = $(`<div id="html_f91712dbde9e43378c1c7a6e0377c468" style="width: 100.0%; height: 100.0%;">신종코로나 영등포구보건소 선별진료소</div>`)[0];
+            popup_b0b8eeb843d348929457aeec883961da.setContent(html_f91712dbde9e43378c1c7a6e0377c468);
+        
+
+        marker_4afcff2b8fe14bc9a3fa385e60dd0d80.bindPopup(popup_b0b8eeb843d348929457aeec883961da)
+        ;
+
+        
+    
+    
+            var marker_060a31b709494025bfeb4b69eb70e6ff = L.marker(
+                [37.4987700454192, 126.762999882731],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c28f40cfc76c428da501d96d67735250 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_060a31b709494025bfeb4b69eb70e6ff.setIcon(icon_c28f40cfc76c428da501d96d67735250);
+        
+    
+        var popup_6cc2fa6888494f0a83507d1b5cadc17e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42ff54e3a33f42e0b977efe06a04804a = $(`<div id="html_42ff54e3a33f42e0b977efe06a04804a" style="width: 100.0%; height: 100.0%;">신종코로나 순천향대학교부천병원 선별진료소</div>`)[0];
+            popup_6cc2fa6888494f0a83507d1b5cadc17e.setContent(html_42ff54e3a33f42e0b977efe06a04804a);
+        
+
+        marker_060a31b709494025bfeb4b69eb70e6ff.bindPopup(popup_6cc2fa6888494f0a83507d1b5cadc17e)
+        ;
+
+        
+    
+    
+            var marker_453f7c38cad64f58af936d225ab6fd52 = L.marker(
+                [37.4610973065619, 126.677443862634],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_1edd306990104ebdbc8723da58280e8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_453f7c38cad64f58af936d225ab6fd52.setIcon(icon_1edd306990104ebdbc8723da58280e8c);
+        
+    
+        var popup_384a90058c5740628ec00bb52053515d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ae1667bd7c54c269efd7c340cb931f6 = $(`<div id="html_9ae1667bd7c54c269efd7c340cb931f6" style="width: 100.0%; height: 100.0%;">신종코로나 미추홀구보건소 선별진료소</div>`)[0];
+            popup_384a90058c5740628ec00bb52053515d.setContent(html_9ae1667bd7c54c269efd7c340cb931f6);
+        
+
+        marker_453f7c38cad64f58af936d225ab6fd52.bindPopup(popup_384a90058c5740628ec00bb52053515d)
+        ;
+
+        
+    
+    
+            var marker_9ba91b8db86144d49b19ea8c860845ab = L.marker(
+                [37.5669493227109, 126.90185909738],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c7e45afa867945c4babf151b45f9a5bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9ba91b8db86144d49b19ea8c860845ab.setIcon(icon_c7e45afa867945c4babf151b45f9a5bd);
+        
+    
+        var popup_1af4cc0876f547ba9932cfe01e1adf6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19aa60c0ade0447d94b49fc1d471e55f = $(`<div id="html_19aa60c0ade0447d94b49fc1d471e55f" style="width: 100.0%; height: 100.0%;">신종코로나 마포구보건소 선별진료소</div>`)[0];
+            popup_1af4cc0876f547ba9932cfe01e1adf6f.setContent(html_19aa60c0ade0447d94b49fc1d471e55f);
+        
+
+        marker_9ba91b8db86144d49b19ea8c860845ab.bindPopup(popup_1af4cc0876f547ba9932cfe01e1adf6f)
+        ;
+
+        
+    
+    
+            var marker_5d956026027945fda7d0d9a6da5e216a = L.marker(
+                [37.567249463615, 127.005691254159],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_d47ab626584b431291ba89e607d26c67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5d956026027945fda7d0d9a6da5e216a.setIcon(icon_d47ab626584b431291ba89e607d26c67);
+        
+    
+        var popup_b89ed3320f2d408f8ae1e4cb000ab03e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_570152f4e46646ee9b190df37666740e = $(`<div id="html_570152f4e46646ee9b190df37666740e" style="width: 100.0%; height: 100.0%;">신종코로나 국립중앙의료원 선별진료소</div>`)[0];
+            popup_b89ed3320f2d408f8ae1e4cb000ab03e.setContent(html_570152f4e46646ee9b190df37666740e);
+        
+
+        marker_5d956026027945fda7d0d9a6da5e216a.bindPopup(popup_b89ed3320f2d408f8ae1e4cb000ab03e)
+        ;
+
+        
+    
+    
+            var marker_c41aecdb31b447c2b67d36cbd039279a = L.marker(
+                [37.5685066365766, 126.96792107169],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_204d51b642de438793328c6821a2b50e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c41aecdb31b447c2b67d36cbd039279a.setIcon(icon_204d51b642de438793328c6821a2b50e);
+        
+    
+        var popup_cb22720bfbe94fa7b7616507109f3cfe = L.popup({"maxWidth": 200});
+
+        
+            var html_fd76b00d359b493bb7475ff417da9df6 = $(`<div id="html_fd76b00d359b493bb7475ff417da9df6" style="width: 100.0%; height: 100.0%;">신종코로나 강북삼성병원 선별진료소</div>`)[0];
+            popup_cb22720bfbe94fa7b7616507109f3cfe.setContent(html_fd76b00d359b493bb7475ff417da9df6);
+        
+
+        marker_c41aecdb31b447c2b67d36cbd039279a.bindPopup(popup_cb22720bfbe94fa7b7616507109f3cfe)
+        ;
+
+        
+    
+    
+            var marker_ad8026ecd1f34fadae6bb2e90358ac81 = L.marker(
+                [37.6024569702276, 126.928823550033],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_047bb26e0fb94956ab35b28e0fd38348 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad8026ecd1f34fadae6bb2e90358ac81.setIcon(icon_047bb26e0fb94956ab35b28e0fd38348);
+        
+    
+        var popup_a9e4611a03af48779018884a507c09e9 = L.popup({"maxWidth": 200});
+
+        
+            var html_d0b69361a21c42dd9f48f6c2d454517d = $(`<div id="html_d0b69361a21c42dd9f48f6c2d454517d" style="width: 100.0%; height: 100.0%;">신종코로나 은평구보건소 선별진료소</div>`)[0];
+            popup_a9e4611a03af48779018884a507c09e9.setContent(html_d0b69361a21c42dd9f48f6c2d454517d);
+        
+
+        marker_ad8026ecd1f34fadae6bb2e90358ac81.bindPopup(popup_a9e4611a03af48779018884a507c09e9)
+        ;
+
+        
+    
+    
+            var marker_8b288ab2b21d405cb047229444277246 = L.marker(
+                [37.7411207604014, 127.042486795527],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_f271ccd49db74439aec67de8eea7aef3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8b288ab2b21d405cb047229444277246.setIcon(icon_f271ccd49db74439aec67de8eea7aef3);
+        
+    
+        var popup_1648f2fccaf6448ab99c30206c1a23d4 = L.popup({"maxWidth": 200});
+
+        
+            var html_8e00df1496e04a4c84c28d3e2226b766 = $(`<div id="html_8e00df1496e04a4c84c28d3e2226b766" style="width: 100.0%; height: 100.0%;">신종코로나 경기도의료원의정부병원 선별진료소</div>`)[0];
+            popup_1648f2fccaf6448ab99c30206c1a23d4.setContent(html_8e00df1496e04a4c84c28d3e2226b766);
+        
+
+        marker_8b288ab2b21d405cb047229444277246.bindPopup(popup_1648f2fccaf6448ab99c30206c1a23d4)
+        ;
+
+        
+    
+    
+            var marker_adc52d7fcbcf4a0684d92d221c842b43 = L.marker(
+                [37.1292496709955, 126.904556332716],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c4275c3d1bad42128d939bc45895cbe1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_adc52d7fcbcf4a0684d92d221c842b43.setIcon(icon_c4275c3d1bad42128d939bc45895cbe1);
+        
+    
+        var popup_46ef9d06202d4c488516ea02b535c88b = L.popup({"maxWidth": 200});
+
+        
+            var html_bfff8f15e4284747bb411c31f9d0409e = $(`<div id="html_bfff8f15e4284747bb411c31f9d0409e" style="width: 100.0%; height: 100.0%;">신종코로나 화성시보건소 선별진료소</div>`)[0];
+            popup_46ef9d06202d4c488516ea02b535c88b.setContent(html_bfff8f15e4284747bb411c31f9d0409e);
+        
+
+        marker_adc52d7fcbcf4a0684d92d221c842b43.bindPopup(popup_46ef9d06202d4c488516ea02b535c88b)
+        ;
+
+        
+    
+    
+            var marker_43dfb7f8d9f7432593e4338951a5bb8d = L.marker(
+                [37.5145795416534, 127.106555651993],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_f403c424a7f34a039e05a29e113e7b49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_43dfb7f8d9f7432593e4338951a5bb8d.setIcon(icon_f403c424a7f34a039e05a29e113e7b49);
+        
+    
+        var popup_5edfb08482894e6b902ebe2774a307ae = L.popup({"maxWidth": 200});
+
+        
+            var html_1e78f6ea57ef4a3785f6272af851665a = $(`<div id="html_1e78f6ea57ef4a3785f6272af851665a" style="width: 100.0%; height: 100.0%;">신종코로나 송파구보건소 선별진료소</div>`)[0];
+            popup_5edfb08482894e6b902ebe2774a307ae.setContent(html_1e78f6ea57ef4a3785f6272af851665a);
+        
+
+        marker_43dfb7f8d9f7432593e4338951a5bb8d.bindPopup(popup_5edfb08482894e6b902ebe2774a307ae)
+        ;
+
+        
+    
+    
+            var marker_47e278316f9a4632b7a0f68bcb0e5cc2 = L.marker(
+                [37.6027096736287, 127.039531534938],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_7814903b43704ac7a5bd723072fc3465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_47e278316f9a4632b7a0f68bcb0e5cc2.setIcon(icon_7814903b43704ac7a5bd723072fc3465);
+        
+    
+        var popup_886d10d46d374d3585642a9ef3ba4d71 = L.popup({"maxWidth": 200});
+
+        
+            var html_06b8089c8fc347b7b108f25165f7825e = $(`<div id="html_06b8089c8fc347b7b108f25165f7825e" style="width: 100.0%; height: 100.0%;">신종코로나 성북구보건소 선별진료소</div>`)[0];
+            popup_886d10d46d374d3585642a9ef3ba4d71.setContent(html_06b8089c8fc347b7b108f25165f7825e);
+        
+
+        marker_47e278316f9a4632b7a0f68bcb0e5cc2.bindPopup(popup_886d10d46d374d3585642a9ef3ba4d71)
+        ;
+
+        
+    
+    
+            var marker_f42907a557fe41fc8459ceb2ca4d5deb = L.marker(
+                [37.5496175052695, 126.868285554347],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c788a8baf3d440b7801afd5bf34964f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f42907a557fe41fc8459ceb2ca4d5deb.setIcon(icon_c788a8baf3d440b7801afd5bf34964f7);
+        
+    
+        var popup_5176fb83df81479a8c4c9541b6847f92 = L.popup({"maxWidth": 200});
+
+        
+            var html_4a33906183fd43fcaa155a0e278dfadc = $(`<div id="html_4a33906183fd43fcaa155a0e278dfadc" style="width: 100.0%; height: 100.0%;">신종코로나 강서구보건소 선별진료소</div>`)[0];
+            popup_5176fb83df81479a8c4c9541b6847f92.setContent(html_4a33906183fd43fcaa155a0e278dfadc);
+        
+
+        marker_f42907a557fe41fc8459ceb2ca4d5deb.bindPopup(popup_5176fb83df81479a8c4c9541b6847f92)
+        ;
+
+        
+    
+    
+            var marker_590f36015ec64122b2acd8518f430e89 = L.marker(
+                [37.4784799393239, 126.951168342897],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_7d6de66da91d4b07a1e8c262d64c4628 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_590f36015ec64122b2acd8518f430e89.setIcon(icon_7d6de66da91d4b07a1e8c262d64c4628);
+        
+    
+        var popup_1c5a46f9470644948373f83856caddb3 = L.popup({"maxWidth": 200});
+
+        
+            var html_ab84041933f9491da7ceaa4c73e3fad8 = $(`<div id="html_ab84041933f9491da7ceaa4c73e3fad8" style="width: 100.0%; height: 100.0%;">신종코로나 관악구보건소 선별진료소</div>`)[0];
+            popup_1c5a46f9470644948373f83856caddb3.setContent(html_ab84041933f9491da7ceaa4c73e3fad8);
+        
+
+        marker_590f36015ec64122b2acd8518f430e89.bindPopup(popup_1c5a46f9470644948373f83856caddb3)
+        ;
+
+        
+    
+    
+            var marker_c52e4a90eb9a450ab9816e33b2f88cb8 = L.marker(
+                [37.4927889503163, 127.046348715929],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ad403b9059b54cb99b0ef6ca842600b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c52e4a90eb9a450ab9816e33b2f88cb8.setIcon(icon_ad403b9059b54cb99b0ef6ca842600b9);
+        
+    
+        var popup_49dca7266be44358a93c8ad26db5a821 = L.popup({"maxWidth": 200});
+
+        
+            var html_231460878f674db39708ff5c083892be = $(`<div id="html_231460878f674db39708ff5c083892be" style="width: 100.0%; height: 100.0%;">신종코로나 강남세브란스병원 선별진료소</div>`)[0];
+            popup_49dca7266be44358a93c8ad26db5a821.setContent(html_231460878f674db39708ff5c083892be);
+        
+
+        marker_c52e4a90eb9a450ab9816e33b2f88cb8.bindPopup(popup_49dca7266be44358a93c8ad26db5a821)
+        ;
+
+        
+    
+    
+            var marker_53670436988946fba819e552f165d89e = L.marker(
+                [35.1462777060438, 129.059954898534],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_44ef3cd1f24943d4b0aa1ada41c488b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_53670436988946fba819e552f165d89e.setIcon(icon_44ef3cd1f24943d4b0aa1ada41c488b1);
+        
+    
+        var popup_9b9ee2d0001a4a31b272bf7f7c26a89f = L.popup({"maxWidth": 200});
+
+        
+            var html_d6263cc05c144e82b8583d7ee7153baa = $(`<div id="html_d6263cc05c144e82b8583d7ee7153baa" style="width: 100.0%; height: 100.0%;">신종코로나 부산진구보건소 선별진료소</div>`)[0];
+            popup_9b9ee2d0001a4a31b272bf7f7c26a89f.setContent(html_d6263cc05c144e82b8583d7ee7153baa);
+        
+
+        marker_53670436988946fba819e552f165d89e.bindPopup(popup_9b9ee2d0001a4a31b272bf7f7c26a89f)
+        ;
+
+        
+    
+    
+            var marker_c3a4a537feeb46faa920da2eb214492f = L.marker(
+                [37.5263484763681, 126.895504665117],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_1501c140e79e4fad94fe3e6ae8b8376f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c3a4a537feeb46faa920da2eb214492f.setIcon(icon_1501c140e79e4fad94fe3e6ae8b8376f);
+        
+    
+        var popup_165f824c09cc4b1e9e297cf3d14179e4 = L.popup({"maxWidth": 200});
+
+        
+            var html_78785bd9b69244d3ae149c83752a0d5a = $(`<div id="html_78785bd9b69244d3ae149c83752a0d5a" style="width: 100.0%; height: 100.0%;">신종코로나 영등포구보건소 선별진료소</div>`)[0];
+            popup_165f824c09cc4b1e9e297cf3d14179e4.setContent(html_78785bd9b69244d3ae149c83752a0d5a);
+        
+
+        marker_c3a4a537feeb46faa920da2eb214492f.bindPopup(popup_165f824c09cc4b1e9e297cf3d14179e4)
+        ;
+
+        
+    
+    
+            var marker_58dd3321a99f48e6a28ffaf59267fcf1 = L.marker(
+                [37.4987700454192, 126.762999882731],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_0e2b7764adb249d89885b4d2a80ac846 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_58dd3321a99f48e6a28ffaf59267fcf1.setIcon(icon_0e2b7764adb249d89885b4d2a80ac846);
+        
+    
+        var popup_271d329730de4c63b375c71366deb0a7 = L.popup({"maxWidth": 200});
+
+        
+            var html_8ba5cc149b1a4a88aeb4836a52382484 = $(`<div id="html_8ba5cc149b1a4a88aeb4836a52382484" style="width: 100.0%; height: 100.0%;">신종코로나 순천향대학교부천병원 선별진료소</div>`)[0];
+            popup_271d329730de4c63b375c71366deb0a7.setContent(html_8ba5cc149b1a4a88aeb4836a52382484);
+        
+
+        marker_58dd3321a99f48e6a28ffaf59267fcf1.bindPopup(popup_271d329730de4c63b375c71366deb0a7)
+        ;
+
+        
+    
+    
+            var marker_fbc04af0af794c2990d12f5e4434f7ab = L.marker(
+                [37.4610973065619, 126.677443862634],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_3ecdbdfb0ab14037844e390b60a7e17d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fbc04af0af794c2990d12f5e4434f7ab.setIcon(icon_3ecdbdfb0ab14037844e390b60a7e17d);
+        
+    
+        var popup_c7dabb6875f643149552027d16f05909 = L.popup({"maxWidth": 200});
+
+        
+            var html_8710faa38c4d419ebc62e877b6c6312f = $(`<div id="html_8710faa38c4d419ebc62e877b6c6312f" style="width: 100.0%; height: 100.0%;">신종코로나 미추홀구보건소 선별진료소</div>`)[0];
+            popup_c7dabb6875f643149552027d16f05909.setContent(html_8710faa38c4d419ebc62e877b6c6312f);
+        
+
+        marker_fbc04af0af794c2990d12f5e4434f7ab.bindPopup(popup_c7dabb6875f643149552027d16f05909)
+        ;
+
+        
+    
+    
+            var marker_5646b71a9b5c41268da69f241f46fc62 = L.marker(
+                [37.5669493227109, 126.90185909738],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_a4adca6050a64b53bec7d7154bf0a55e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5646b71a9b5c41268da69f241f46fc62.setIcon(icon_a4adca6050a64b53bec7d7154bf0a55e);
+        
+    
+        var popup_80b3aa6e99494f239236c5b2630adca9 = L.popup({"maxWidth": 200});
+
+        
+            var html_905c17d7a59f49d0ba02c65df9362399 = $(`<div id="html_905c17d7a59f49d0ba02c65df9362399" style="width: 100.0%; height: 100.0%;">신종코로나 마포구보건소 선별진료소</div>`)[0];
+            popup_80b3aa6e99494f239236c5b2630adca9.setContent(html_905c17d7a59f49d0ba02c65df9362399);
+        
+
+        marker_5646b71a9b5c41268da69f241f46fc62.bindPopup(popup_80b3aa6e99494f239236c5b2630adca9)
+        ;
+
+        
+    
+    
+            var marker_14cb708d2b4f40aab1026522195e823b = L.marker(
+                [37.567249463615, 127.005691254159],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_6b8b00bbb7b949d5af342a5274adcf0b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_14cb708d2b4f40aab1026522195e823b.setIcon(icon_6b8b00bbb7b949d5af342a5274adcf0b);
+        
+    
+        var popup_0ac959f288304e5584b5587555e5574c = L.popup({"maxWidth": 200});
+
+        
+            var html_912a20b9c6b14b6ea6a049d2d8522373 = $(`<div id="html_912a20b9c6b14b6ea6a049d2d8522373" style="width: 100.0%; height: 100.0%;">신종코로나 국립중앙의료원 선별진료소</div>`)[0];
+            popup_0ac959f288304e5584b5587555e5574c.setContent(html_912a20b9c6b14b6ea6a049d2d8522373);
+        
+
+        marker_14cb708d2b4f40aab1026522195e823b.bindPopup(popup_0ac959f288304e5584b5587555e5574c)
+        ;
+
+        
+    
+    
+            var marker_c0d437c990e240089cbf1a3741229c19 = L.marker(
+                [37.5685066365766, 126.96792107169],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_82e68fe3d6c742608d78878f58eb5c9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c0d437c990e240089cbf1a3741229c19.setIcon(icon_82e68fe3d6c742608d78878f58eb5c9e);
+        
+    
+        var popup_21e2404e52b7428aa3ecc4f4174723cf = L.popup({"maxWidth": 200});
+
+        
+            var html_124e3186093c4946ab72651102172c04 = $(`<div id="html_124e3186093c4946ab72651102172c04" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강북삼성병원 선별진료소</b></div>`)[0];
+            popup_21e2404e52b7428aa3ecc4f4174723cf.setContent(html_124e3186093c4946ab72651102172c04);
+        
+
+        marker_c0d437c990e240089cbf1a3741229c19.bindPopup(popup_21e2404e52b7428aa3ecc4f4174723cf)
+        ;
+
+        
+    
+    
+            var marker_5b408e14c2964d6bac10e50fc3f3e592 = L.marker(
+                [37.6024569702276, 126.928823550033],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_9aaf8f5d1eac4a469bde8588c4c1f7fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5b408e14c2964d6bac10e50fc3f3e592.setIcon(icon_9aaf8f5d1eac4a469bde8588c4c1f7fe);
+        
+    
+        var popup_aa38648609ba4429b4e87f296f20d037 = L.popup({"maxWidth": 200});
+
+        
+            var html_a6c496f5e47a4c9b807a937c183043fd = $(`<div id="html_a6c496f5e47a4c9b807a937c183043fd" style="width: 100.0%; height: 100.0%;"><b>신종코로나 은평구보건소 선별진료소</b></div>`)[0];
+            popup_aa38648609ba4429b4e87f296f20d037.setContent(html_a6c496f5e47a4c9b807a937c183043fd);
+        
+
+        marker_5b408e14c2964d6bac10e50fc3f3e592.bindPopup(popup_aa38648609ba4429b4e87f296f20d037)
+        ;
+
+        
+    
+    
+            var marker_3a0a6b245ee34e1a8b1cd73c59b1fb5b = L.marker(
+                [37.7411207604014, 127.042486795527],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_61ec74b4a266474c90f147d580c03927 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3a0a6b245ee34e1a8b1cd73c59b1fb5b.setIcon(icon_61ec74b4a266474c90f147d580c03927);
+        
+    
+        var popup_89bcef94c74f484ab4d7a2e19df9fa6b = L.popup({"maxWidth": 200});
+
+        
+            var html_c66d308c848d4a1ca1042a4b0a2468df = $(`<div id="html_c66d308c848d4a1ca1042a4b0a2468df" style="width: 100.0%; height: 100.0%;"><b>신종코로나 경기도의료원의정부병원 선별진료소</b></div>`)[0];
+            popup_89bcef94c74f484ab4d7a2e19df9fa6b.setContent(html_c66d308c848d4a1ca1042a4b0a2468df);
+        
+
+        marker_3a0a6b245ee34e1a8b1cd73c59b1fb5b.bindPopup(popup_89bcef94c74f484ab4d7a2e19df9fa6b)
+        ;
+
+        
+    
+    
+            var marker_967892d06765466897d37793739cee8d = L.marker(
+                [37.1292496709955, 126.904556332716],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_c8d261850c55450baa6d204aabaf78f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_967892d06765466897d37793739cee8d.setIcon(icon_c8d261850c55450baa6d204aabaf78f9);
+        
+    
+        var popup_e28123a5495944a98112e7405b4a4b2a = L.popup({"maxWidth": 200});
+
+        
+            var html_5647be39575d42c5bab9d76da3703656 = $(`<div id="html_5647be39575d42c5bab9d76da3703656" style="width: 100.0%; height: 100.0%;"><b>신종코로나 화성시보건소 선별진료소</b></div>`)[0];
+            popup_e28123a5495944a98112e7405b4a4b2a.setContent(html_5647be39575d42c5bab9d76da3703656);
+        
+
+        marker_967892d06765466897d37793739cee8d.bindPopup(popup_e28123a5495944a98112e7405b4a4b2a)
+        ;
+
+        
+    
+    
+            var marker_0208721577bb49d1aeae0a47a40b4d98 = L.marker(
+                [37.5145795416534, 127.106555651993],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_121e765077614537ae1b9ec134e3f685 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0208721577bb49d1aeae0a47a40b4d98.setIcon(icon_121e765077614537ae1b9ec134e3f685);
+        
+    
+        var popup_5564c51f557845599e8fbf3916df5577 = L.popup({"maxWidth": 200});
+
+        
+            var html_e1f19ce5e11b4765be7dd3d61be10582 = $(`<div id="html_e1f19ce5e11b4765be7dd3d61be10582" style="width: 100.0%; height: 100.0%;"><b>신종코로나 송파구보건소 선별진료소</b></div>`)[0];
+            popup_5564c51f557845599e8fbf3916df5577.setContent(html_e1f19ce5e11b4765be7dd3d61be10582);
+        
+
+        marker_0208721577bb49d1aeae0a47a40b4d98.bindPopup(popup_5564c51f557845599e8fbf3916df5577)
+        ;
+
+        
+    
+    
+            var marker_113b69359c1343578dd2591bbb95cc23 = L.marker(
+                [37.6027096736287, 127.039531534938],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_dade49830ab14c789e382b8dbed59c4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_113b69359c1343578dd2591bbb95cc23.setIcon(icon_dade49830ab14c789e382b8dbed59c4b);
+        
+    
+        var popup_23324f44ce174439b8c6d80e43f67f45 = L.popup({"maxWidth": 200});
+
+        
+            var html_13a3ff7b6644422f9c3524de20070da7 = $(`<div id="html_13a3ff7b6644422f9c3524de20070da7" style="width: 100.0%; height: 100.0%;"><b>신종코로나 성북구보건소 선별진료소</b></div>`)[0];
+            popup_23324f44ce174439b8c6d80e43f67f45.setContent(html_13a3ff7b6644422f9c3524de20070da7);
+        
+
+        marker_113b69359c1343578dd2591bbb95cc23.bindPopup(popup_23324f44ce174439b8c6d80e43f67f45)
+        ;
+
+        
+    
+    
+            var marker_0f194bde0d4d481aac3c3f1721262966 = L.marker(
+                [37.5496175052695, 126.868285554347],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ed8f7996169a41d384074e3c386c1e1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0f194bde0d4d481aac3c3f1721262966.setIcon(icon_ed8f7996169a41d384074e3c386c1e1b);
+        
+    
+        var popup_b3549434ee5a4acbb6976423fa52175b = L.popup({"maxWidth": 200});
+
+        
+            var html_46d9e1fed32746ff98858a70f33b1920 = $(`<div id="html_46d9e1fed32746ff98858a70f33b1920" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강서구보건소 선별진료소</b></div>`)[0];
+            popup_b3549434ee5a4acbb6976423fa52175b.setContent(html_46d9e1fed32746ff98858a70f33b1920);
+        
+
+        marker_0f194bde0d4d481aac3c3f1721262966.bindPopup(popup_b3549434ee5a4acbb6976423fa52175b)
+        ;
+
+        
+    
+    
+            var marker_72ac41f989e942dd8de72c990ef63aa0 = L.marker(
+                [37.4784799393239, 126.951168342897],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_5de94a9980e34cafa8721af9673ce709 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_72ac41f989e942dd8de72c990ef63aa0.setIcon(icon_5de94a9980e34cafa8721af9673ce709);
+        
+    
+        var popup_9858c2bbb2bd4fa7871ee2c5f4e18e3d = L.popup({"maxWidth": 200});
+
+        
+            var html_2b45c44d48c54f93b4f5aedb233913d6 = $(`<div id="html_2b45c44d48c54f93b4f5aedb233913d6" style="width: 100.0%; height: 100.0%;"><b>신종코로나 관악구보건소 선별진료소</b></div>`)[0];
+            popup_9858c2bbb2bd4fa7871ee2c5f4e18e3d.setContent(html_2b45c44d48c54f93b4f5aedb233913d6);
+        
+
+        marker_72ac41f989e942dd8de72c990ef63aa0.bindPopup(popup_9858c2bbb2bd4fa7871ee2c5f4e18e3d)
+        ;
+
+        
+    
+    
+            var marker_161b4c15299f4133ad8d2a426cc14558 = L.marker(
+                [37.4927889503163, 127.046348715929],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_b347704e0ea941969ab320f0a709e7a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_161b4c15299f4133ad8d2a426cc14558.setIcon(icon_b347704e0ea941969ab320f0a709e7a2);
+        
+    
+        var popup_3297a214aed649cab874c2331a773f33 = L.popup({"maxWidth": 200});
+
+        
+            var html_8ae421862a5e4f02b671bab4057fbfcf = $(`<div id="html_8ae421862a5e4f02b671bab4057fbfcf" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강남세브란스병원 선별진료소</b></div>`)[0];
+            popup_3297a214aed649cab874c2331a773f33.setContent(html_8ae421862a5e4f02b671bab4057fbfcf);
+        
+
+        marker_161b4c15299f4133ad8d2a426cc14558.bindPopup(popup_3297a214aed649cab874c2331a773f33)
+        ;
+
+        
+    
+    
+            var marker_21c3c7df61b74b3fa71bd74a5f2c9517 = L.marker(
+                [35.1462777060438, 129.059954898534],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_356c907152f84542a4a43d72f3e1091d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_21c3c7df61b74b3fa71bd74a5f2c9517.setIcon(icon_356c907152f84542a4a43d72f3e1091d);
+        
+    
+        var popup_83afd051d6134fc1b82fa9183f5bbd56 = L.popup({"maxWidth": 200});
+
+        
+            var html_ea41f101adcb4f2f90c67e62831a7e9a = $(`<div id="html_ea41f101adcb4f2f90c67e62831a7e9a" style="width: 100.0%; height: 100.0%;"><b>신종코로나 부산진구보건소 선별진료소</b></div>`)[0];
+            popup_83afd051d6134fc1b82fa9183f5bbd56.setContent(html_ea41f101adcb4f2f90c67e62831a7e9a);
+        
+
+        marker_21c3c7df61b74b3fa71bd74a5f2c9517.bindPopup(popup_83afd051d6134fc1b82fa9183f5bbd56)
+        ;
+
+        
+    
+    
+            var marker_d07fd2fad3ed4034ac183d7fd647722f = L.marker(
+                [37.5263484763681, 126.895504665117],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_d709fda34c6f46fa8d756e95db4f86cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d07fd2fad3ed4034ac183d7fd647722f.setIcon(icon_d709fda34c6f46fa8d756e95db4f86cc);
+        
+    
+        var popup_2742e72939ba45a7ad7d9d7692cb64bf = L.popup({"maxWidth": 200});
+
+        
+            var html_7cb362b1fd8a464bbe5d51b4e7d32abf = $(`<div id="html_7cb362b1fd8a464bbe5d51b4e7d32abf" style="width: 100.0%; height: 100.0%;"><b>신종코로나 영등포구보건소 선별진료소</b></div>`)[0];
+            popup_2742e72939ba45a7ad7d9d7692cb64bf.setContent(html_7cb362b1fd8a464bbe5d51b4e7d32abf);
+        
+
+        marker_d07fd2fad3ed4034ac183d7fd647722f.bindPopup(popup_2742e72939ba45a7ad7d9d7692cb64bf)
+        ;
+
+        
+    
+    
+            var marker_b78e468bd120468d96513e112434801e = L.marker(
+                [37.4987700454192, 126.762999882731],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_5e294cd88bba4e97b6915b7296b1f88d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b78e468bd120468d96513e112434801e.setIcon(icon_5e294cd88bba4e97b6915b7296b1f88d);
+        
+    
+        var popup_08b8001d92dc4799a7420568046163a5 = L.popup({"maxWidth": 200});
+
+        
+            var html_50c60f8ea3294e2fb62dbc7a5c835dfc = $(`<div id="html_50c60f8ea3294e2fb62dbc7a5c835dfc" style="width: 100.0%; height: 100.0%;"><b>신종코로나 순천향대학교부천병원 선별진료소</b></div>`)[0];
+            popup_08b8001d92dc4799a7420568046163a5.setContent(html_50c60f8ea3294e2fb62dbc7a5c835dfc);
+        
+
+        marker_b78e468bd120468d96513e112434801e.bindPopup(popup_08b8001d92dc4799a7420568046163a5)
+        ;
+
+        
+    
+    
+            var marker_f6372011e6694360826acb458be72233 = L.marker(
+                [37.4610973065619, 126.677443862634],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_0def514322b943e99e247080f2054bee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f6372011e6694360826acb458be72233.setIcon(icon_0def514322b943e99e247080f2054bee);
+        
+    
+        var popup_401e937707674d758c2c4add395f6bff = L.popup({"maxWidth": 200});
+
+        
+            var html_f6468692bbb54fb0a360c7327da5ff05 = $(`<div id="html_f6468692bbb54fb0a360c7327da5ff05" style="width: 100.0%; height: 100.0%;"><b>신종코로나 미추홀구보건소 선별진료소</b></div>`)[0];
+            popup_401e937707674d758c2c4add395f6bff.setContent(html_f6468692bbb54fb0a360c7327da5ff05);
+        
+
+        marker_f6372011e6694360826acb458be72233.bindPopup(popup_401e937707674d758c2c4add395f6bff)
+        ;
+
+        
+    
+    
+            var marker_5393b5755e4a4972b0bceb16d5996ceb = L.marker(
+                [37.5669493227109, 126.90185909738],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_75a04ac1ecc642429479db256cc91b94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5393b5755e4a4972b0bceb16d5996ceb.setIcon(icon_75a04ac1ecc642429479db256cc91b94);
+        
+    
+        var popup_546fa81a164a409f865c29fbc9858ff4 = L.popup({"maxWidth": 200});
+
+        
+            var html_9ce230f25f51447794e3448b6cd5e83c = $(`<div id="html_9ce230f25f51447794e3448b6cd5e83c" style="width: 100.0%; height: 100.0%;"><b>신종코로나 마포구보건소 선별진료소</b></div>`)[0];
+            popup_546fa81a164a409f865c29fbc9858ff4.setContent(html_9ce230f25f51447794e3448b6cd5e83c);
+        
+
+        marker_5393b5755e4a4972b0bceb16d5996ceb.bindPopup(popup_546fa81a164a409f865c29fbc9858ff4)
+        ;
+
+        
+    
+    
+            var marker_e61c1db5be9140e1a420ccd29c5b9da9 = L.marker(
+                [37.567249463615, 127.005691254159],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_36e044e9db3a450bab7847f211d868eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e61c1db5be9140e1a420ccd29c5b9da9.setIcon(icon_36e044e9db3a450bab7847f211d868eb);
+        
+    
+        var popup_2111d1ca2fd54fb3a3b9e9f982a5155c = L.popup({"maxWidth": 200});
+
+        
+            var html_4b07a977e5e2446b98cbd45fe6af474f = $(`<div id="html_4b07a977e5e2446b98cbd45fe6af474f" style="width: 100.0%; height: 100.0%;"><b>신종코로나 국립중앙의료원 선별진료소</b></div>`)[0];
+            popup_2111d1ca2fd54fb3a3b9e9f982a5155c.setContent(html_4b07a977e5e2446b98cbd45fe6af474f);
+        
+
+        marker_e61c1db5be9140e1a420ccd29c5b9da9.bindPopup(popup_2111d1ca2fd54fb3a3b9e9f982a5155c)
+        ;
+
+        
+    
+    
+            var marker_24d08401c531419abce4a70462a2da45 = L.marker(
+                [37.5685066365766, 126.96792107169],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_68e662bda83342fd9050249993ae79ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_24d08401c531419abce4a70462a2da45.setIcon(icon_68e662bda83342fd9050249993ae79ad);
+        
+    
+        var popup_c997c50e3315452b8a6a7e53494d2397 = L.popup({"maxWidth": 200});
+
+        
+            var html_e7b7aeb0f04b45c0a88d9be71be6eb45 = $(`<div id="html_e7b7aeb0f04b45c0a88d9be71be6eb45" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강북삼성병원 선별진료소</b><br>02-2001-2001</div>`)[0];
+            popup_c997c50e3315452b8a6a7e53494d2397.setContent(html_e7b7aeb0f04b45c0a88d9be71be6eb45);
+        
+
+        marker_24d08401c531419abce4a70462a2da45.bindPopup(popup_c997c50e3315452b8a6a7e53494d2397)
+        ;
+
+        
+    
+    
+            var marker_a792f1948b4d4c88bf4eb9dbf1079895 = L.marker(
+                [37.6024569702276, 126.928823550033],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_3e5df46dac4a4da482e379c92aaa48d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a792f1948b4d4c88bf4eb9dbf1079895.setIcon(icon_3e5df46dac4a4da482e379c92aaa48d5);
+        
+    
+        var popup_618c8b0bac75463bbe00afa26d126f96 = L.popup({"maxWidth": 200});
+
+        
+            var html_cb14db61e7524e539e915ba595a71831 = $(`<div id="html_cb14db61e7524e539e915ba595a71831" style="width: 100.0%; height: 100.0%;"><b>신종코로나 은평구보건소 선별진료소</b><br>02-351-8000</div>`)[0];
+            popup_618c8b0bac75463bbe00afa26d126f96.setContent(html_cb14db61e7524e539e915ba595a71831);
+        
+
+        marker_a792f1948b4d4c88bf4eb9dbf1079895.bindPopup(popup_618c8b0bac75463bbe00afa26d126f96)
+        ;
+
+        
+    
+    
+            var marker_0cb9a8ecaa6e40bbba2bcf50db12d815 = L.marker(
+                [37.7411207604014, 127.042486795527],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ea72a020e22a4ebea5e91b764d872886 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0cb9a8ecaa6e40bbba2bcf50db12d815.setIcon(icon_ea72a020e22a4ebea5e91b764d872886);
+        
+    
+        var popup_15f27f27ed5542c8ac5c3519605c3e9c = L.popup({"maxWidth": 200});
+
+        
+            var html_fe681c89881348aea1eec7842d0ca3f0 = $(`<div id="html_fe681c89881348aea1eec7842d0ca3f0" style="width: 100.0%; height: 100.0%;"><b>신종코로나 경기도의료원의정부병원 선별진료소</b><br>031-828-5000</div>`)[0];
+            popup_15f27f27ed5542c8ac5c3519605c3e9c.setContent(html_fe681c89881348aea1eec7842d0ca3f0);
+        
+
+        marker_0cb9a8ecaa6e40bbba2bcf50db12d815.bindPopup(popup_15f27f27ed5542c8ac5c3519605c3e9c)
+        ;
+
+        
+    
+    
+            var marker_d7daeff27ed24d98a9f88280cc766b16 = L.marker(
+                [37.1292496709955, 126.904556332716],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_e7f58edeefa14e348207aaec5a303436 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d7daeff27ed24d98a9f88280cc766b16.setIcon(icon_e7f58edeefa14e348207aaec5a303436);
+        
+    
+        var popup_617039ff515843f498539e3b8ed46fd3 = L.popup({"maxWidth": 200});
+
+        
+            var html_3cc64315b12f41348b2301560c54ae03 = $(`<div id="html_3cc64315b12f41348b2301560c54ae03" style="width: 100.0%; height: 100.0%;"><b>신종코로나 화성시보건소 선별진료소</b><br>031-369-2551</div>`)[0];
+            popup_617039ff515843f498539e3b8ed46fd3.setContent(html_3cc64315b12f41348b2301560c54ae03);
+        
+
+        marker_d7daeff27ed24d98a9f88280cc766b16.bindPopup(popup_617039ff515843f498539e3b8ed46fd3)
+        ;
+
+        
+    
+    
+            var marker_d7ce8f4c77834294a00c283406dd3179 = L.marker(
+                [37.5145795416534, 127.106555651993],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_d4b8cfa4ebd64e2ca073386f1706891f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d7ce8f4c77834294a00c283406dd3179.setIcon(icon_d4b8cfa4ebd64e2ca073386f1706891f);
+        
+    
+        var popup_e884618c6b344fca9d1a45c3f9334d0d = L.popup({"maxWidth": 200});
+
+        
+            var html_598872feaa084d27b1102b0d9f2f7116 = $(`<div id="html_598872feaa084d27b1102b0d9f2f7116" style="width: 100.0%; height: 100.0%;"><b>신종코로나 송파구보건소 선별진료소</b><br>02-2147-3478</div>`)[0];
+            popup_e884618c6b344fca9d1a45c3f9334d0d.setContent(html_598872feaa084d27b1102b0d9f2f7116);
+        
+
+        marker_d7ce8f4c77834294a00c283406dd3179.bindPopup(popup_e884618c6b344fca9d1a45c3f9334d0d)
+        ;
+
+        
+    
+    
+            var marker_30b9946a3a194a8e98a7716b9747a6f8 = L.marker(
+                [37.6027096736287, 127.039531534938],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_eec1d63a75d349cb812fec621d529601 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_30b9946a3a194a8e98a7716b9747a6f8.setIcon(icon_eec1d63a75d349cb812fec621d529601);
+        
+    
+        var popup_56b3c790ca654e99ba68472852f0188e = L.popup({"maxWidth": 200});
+
+        
+            var html_80af485a9467496a9377510d7571763a = $(`<div id="html_80af485a9467496a9377510d7571763a" style="width: 100.0%; height: 100.0%;"><b>신종코로나 성북구보건소 선별진료소</b><br>02-2241-6022</div>`)[0];
+            popup_56b3c790ca654e99ba68472852f0188e.setContent(html_80af485a9467496a9377510d7571763a);
+        
+
+        marker_30b9946a3a194a8e98a7716b9747a6f8.bindPopup(popup_56b3c790ca654e99ba68472852f0188e)
+        ;
+
+        
+    
+    
+            var marker_035d1546324d465a9becb73b32a8152e = L.marker(
+                [37.5496175052695, 126.868285554347],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_6a9574531eb74663b2d2b7283a33b408 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_035d1546324d465a9becb73b32a8152e.setIcon(icon_6a9574531eb74663b2d2b7283a33b408);
+        
+    
+        var popup_9d00650d719d497aa452d93b88815465 = L.popup({"maxWidth": 200});
+
+        
+            var html_da501bbeadf849f5ac6cc91a42d76047 = $(`<div id="html_da501bbeadf849f5ac6cc91a42d76047" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강서구보건소 선별진료소</b><br>02-2600-5868</div>`)[0];
+            popup_9d00650d719d497aa452d93b88815465.setContent(html_da501bbeadf849f5ac6cc91a42d76047);
+        
+
+        marker_035d1546324d465a9becb73b32a8152e.bindPopup(popup_9d00650d719d497aa452d93b88815465)
+        ;
+
+        
+    
+    
+            var marker_265fb23366eb4fb2ac0a0e0b02c8721f = L.marker(
+                [37.4784799393239, 126.951168342897],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_ab82cd1e25be4863a44116e2f3d88af5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_265fb23366eb4fb2ac0a0e0b02c8721f.setIcon(icon_ab82cd1e25be4863a44116e2f3d88af5);
+        
+    
+        var popup_993aa40ab8b4401f95b1816ee370567c = L.popup({"maxWidth": 200});
+
+        
+            var html_1f487b6f298a4916bcb857c4c1e350ab = $(`<div id="html_1f487b6f298a4916bcb857c4c1e350ab" style="width: 100.0%; height: 100.0%;"><b>신종코로나 관악구보건소 선별진료소</b><br>02-879-7131</div>`)[0];
+            popup_993aa40ab8b4401f95b1816ee370567c.setContent(html_1f487b6f298a4916bcb857c4c1e350ab);
+        
+
+        marker_265fb23366eb4fb2ac0a0e0b02c8721f.bindPopup(popup_993aa40ab8b4401f95b1816ee370567c)
+        ;
+
+        
+    
+    
+            var marker_d30c7abd6d3946b3b9d49b7e7f22330f = L.marker(
+                [37.4927889503163, 127.046348715929],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_58245cd990cc4d169be739c28e0104a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d30c7abd6d3946b3b9d49b7e7f22330f.setIcon(icon_58245cd990cc4d169be739c28e0104a4);
+        
+    
+        var popup_54d068e6ac674f0392357e8ed2a70807 = L.popup({"maxWidth": 200});
+
+        
+            var html_c862d0d7305a42d8b8fdb7eefd8957ca = $(`<div id="html_c862d0d7305a42d8b8fdb7eefd8957ca" style="width: 100.0%; height: 100.0%;"><b>신종코로나 강남세브란스병원 선별진료소</b><br>02-2019-3114</div>`)[0];
+            popup_54d068e6ac674f0392357e8ed2a70807.setContent(html_c862d0d7305a42d8b8fdb7eefd8957ca);
+        
+
+        marker_d30c7abd6d3946b3b9d49b7e7f22330f.bindPopup(popup_54d068e6ac674f0392357e8ed2a70807)
+        ;
+
+        
+    
+    
+            var marker_71961a980df14fc3a65af60774f50d5a = L.marker(
+                [35.1462777060438, 129.059954898534],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_d511f05f32cd4e0f83f88d0eb1dd1043 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_71961a980df14fc3a65af60774f50d5a.setIcon(icon_d511f05f32cd4e0f83f88d0eb1dd1043);
+        
+    
+        var popup_8495f4bc112f4836a4bfa31a038fbee0 = L.popup({"maxWidth": 200});
+
+        
+            var html_fbfb8031900247ba9cef880e27389eef = $(`<div id="html_fbfb8031900247ba9cef880e27389eef" style="width: 100.0%; height: 100.0%;"><b>신종코로나 부산진구보건소 선별진료소</b><br>051-605-6081</div>`)[0];
+            popup_8495f4bc112f4836a4bfa31a038fbee0.setContent(html_fbfb8031900247ba9cef880e27389eef);
+        
+
+        marker_71961a980df14fc3a65af60774f50d5a.bindPopup(popup_8495f4bc112f4836a4bfa31a038fbee0)
+        ;
+
+        
+    
+    
+            var marker_05f4a8b86fca49abb110404b90498a1a = L.marker(
+                [37.5263484763681, 126.895504665117],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_389fd167cbe74a1c8830d29d9e14e647 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_05f4a8b86fca49abb110404b90498a1a.setIcon(icon_389fd167cbe74a1c8830d29d9e14e647);
+        
+    
+        var popup_9cc027f83b734d3f9f6415191d9a950b = L.popup({"maxWidth": 200});
+
+        
+            var html_d8b328d086cd4f258c87c6b6849d2be6 = $(`<div id="html_d8b328d086cd4f258c87c6b6849d2be6" style="width: 100.0%; height: 100.0%;"><b>신종코로나 영등포구보건소 선별진료소</b><br>02-2670-4953</div>`)[0];
+            popup_9cc027f83b734d3f9f6415191d9a950b.setContent(html_d8b328d086cd4f258c87c6b6849d2be6);
+        
+
+        marker_05f4a8b86fca49abb110404b90498a1a.bindPopup(popup_9cc027f83b734d3f9f6415191d9a950b)
+        ;
+
+        
+    
+    
+            var marker_33950206c1e44019a65397422aa7011f = L.marker(
+                [37.4987700454192, 126.762999882731],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_e377280a005140adb45b818bf3e01955 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_33950206c1e44019a65397422aa7011f.setIcon(icon_e377280a005140adb45b818bf3e01955);
+        
+    
+        var popup_f230154eb9d649128b105d7d64a37133 = L.popup({"maxWidth": 200});
+
+        
+            var html_ca5ccde710224b628e26aaea3a842403 = $(`<div id="html_ca5ccde710224b628e26aaea3a842403" style="width: 100.0%; height: 100.0%;"><b>신종코로나 순천향대학교부천병원 선별진료소</b><br>031-621-5114</div>`)[0];
+            popup_f230154eb9d649128b105d7d64a37133.setContent(html_ca5ccde710224b628e26aaea3a842403);
+        
+
+        marker_33950206c1e44019a65397422aa7011f.bindPopup(popup_f230154eb9d649128b105d7d64a37133)
+        ;
+
+        
+    
+    
+            var marker_9685863aab534e99b55a0d65b3d39dec = L.marker(
+                [37.4610973065619, 126.677443862634],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_17aca7b717c24fcd886ef217e70eb982 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9685863aab534e99b55a0d65b3d39dec.setIcon(icon_17aca7b717c24fcd886ef217e70eb982);
+        
+    
+        var popup_444f8fe6a3074f22aee822de4739f0b9 = L.popup({"maxWidth": 200});
+
+        
+            var html_9bb376c7ea5f4e74b555ebedd1922426 = $(`<div id="html_9bb376c7ea5f4e74b555ebedd1922426" style="width: 100.0%; height: 100.0%;"><b>신종코로나 미추홀구보건소 선별진료소</b><br>032-880-5311</div>`)[0];
+            popup_444f8fe6a3074f22aee822de4739f0b9.setContent(html_9bb376c7ea5f4e74b555ebedd1922426);
+        
+
+        marker_9685863aab534e99b55a0d65b3d39dec.bindPopup(popup_444f8fe6a3074f22aee822de4739f0b9)
+        ;
+
+        
+    
+    
+            var marker_6327637925b74ec89a650a7ab72826ac = L.marker(
+                [37.5669493227109, 126.90185909738],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_31b63e989d934ddc9532a7ba51826465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6327637925b74ec89a650a7ab72826ac.setIcon(icon_31b63e989d934ddc9532a7ba51826465);
+        
+    
+        var popup_08932568724e49dbb581a517cd3a5fdf = L.popup({"maxWidth": 200});
+
+        
+            var html_343a998d0d8e49eb87493c0df5333023 = $(`<div id="html_343a998d0d8e49eb87493c0df5333023" style="width: 100.0%; height: 100.0%;"><b>신종코로나 마포구보건소 선별진료소</b><br>02-3153-9037</div>`)[0];
+            popup_08932568724e49dbb581a517cd3a5fdf.setContent(html_343a998d0d8e49eb87493c0df5333023);
+        
+
+        marker_6327637925b74ec89a650a7ab72826ac.bindPopup(popup_08932568724e49dbb581a517cd3a5fdf)
+        ;
+
+        
+    
+    
+            var marker_3f4a699ce0e74ce2977cf0e0ca82d2e9 = L.marker(
+                [37.567249463615, 127.005691254159],
+                {}
+            ).addTo(map_40821194dbc84f1b868164c3bbd3597c);
+        
+    
+            var icon_64418a8d86db4d3ab333f24bdd7a9f45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3f4a699ce0e74ce2977cf0e0ca82d2e9.setIcon(icon_64418a8d86db4d3ab333f24bdd7a9f45);
+        
+    
+        var popup_392a50745e1b4758804c120208243bf9 = L.popup({"maxWidth": 200});
+
+        
+            var html_b96e937390c443319b6c8fcfbdb35677 = $(`<div id="html_b96e937390c443319b6c8fcfbdb35677" style="width: 100.0%; height: 100.0%;"><b>신종코로나 국립중앙의료원 선별진료소</b><br>02-2260-7114</div>`)[0];
+            popup_392a50745e1b4758804c120208243bf9.setContent(html_b96e937390c443319b6c8fcfbdb35677);
+        
+
+        marker_3f4a699ce0e74ce2977cf0e0ca82d2e9.bindPopup(popup_392a50745e1b4758804c120208243bf9)
+        ;
+
+        
+    
+</script>
